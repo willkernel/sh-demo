@@ -1,5 +1,37 @@
 # sh-demo
 
+直接执行命令
+
+date
+who
+
+创建变量，如果是字符串的话，有空格的一定要用双引号，否则会被解析成命令
+
+NDK=10
+text="i love you"
+
+命令的执行结果作为变量的值，例如以当前时间作为文件名
+
+text1=`date`
+text2=$(who)
+
+输出
+
+echo $NDK
+echo $text
+echo $text1
+echo $text2
+
+字符串拼接，同理：有空格需要用双引号
+
+echo "$text very much"
+
+如果需要输出$的话，需要使用转义字符
+
+echo "\$"
+
+
+
 运行两种方式
 
 1  ./bash.sh
@@ -10,9 +42,9 @@
 
 程序中的/r/n 换行符限制
 
-![img](C:/Users/willkernel/AppData/Local/YNote/data/qq88314E19A907A3B08064F62DDDFB9EC5/4de3f3defc404208a135a6ea1554eace/clipboard.png)
+![img](http://p4n1d4izv.bkt.clouddn.com/images/sh1.png)
 
-![img](C:/Users/willkernel/AppData/Local/YNote/data/qq88314E19A907A3B08064F62DDDFB9EC5/112b6948cbaa44d4aee583f42950309f/clipboard.png)
+![img](http://p4n1d4izv.bkt.clouddn.com/images/sh2.png)
 
 命令退出的状态
 
@@ -27,7 +59,7 @@
 
 查看上一次命令的执行状态echo $?在shell脚本中，自己指定退出的状态exit 状态码
 
-![img](C:/Users/willkernel/AppData/Local/YNote/data/qq88314E19A907A3B08064F62DDDFB9EC5/35249a0161f74c1c8094640845c44db4/clipboard.png)
+![img](http://p4n1d4izv.bkt.clouddn.com/images/sh3.png)
 
 grep命令是查找命令，例如查找test文本在test.txt中所在的行数：grep -n test test.txt
 
@@ -141,7 +173,7 @@ ricky)    echo "hello, ricky";;
 esac
 ```
 
-![img](C:/Users/willkernel/AppData/Local/YNote/data/qq88314E19A907A3B08064F62DDDFB9EC5/96c12f9b8bc54d6086a0647039020cb6/clipboard.png)
+![img](http://p4n1d4izv.bkt.clouddn.com/images/sh4.png)
 
 While循环
 
